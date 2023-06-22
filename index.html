@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Moment.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1"></script>
+
+    <title>Weight Record</title>
+  </head>
+  <body>
+    <h1 id="greeting"></h1>
+    <div id="updated-weight">
+      <h2>현재 몸무게</h2>
+      <h3></h3>
+      <form id="update-form">
+        <input
+          type="number"
+          step="0.1"
+          min="0"
+          placeholder="수정된 몸무게 입력"
+        />
+      </form>
+    </div>
+    <div id="other-info">
+      <span>BMI</span>
+      <span></span>
+      <span>목표 몸무게</span>
+      <span></span>
+    </div>
+    <canvas id="weight-chart"></canvas>
+
+    <div id="todo">
+      <h2>Today's To Do</h2>
+      <form id="todo-form">
+        <input type="text" placeholder="Write your today's exercise" required />
+      </form>
+
+      <ul id="todo-list"></ul>
+      <p id="quote"></p>
+    </div>
+
+    <script src="js/greeting.js"></script>
+    <script src="js/currentWeight.js"></script>
+    <script src="js/otherInfo.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/chart.js"></script>
+  </body>
+</html>
