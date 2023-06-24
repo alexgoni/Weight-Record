@@ -1,7 +1,7 @@
 const images = [
-  'url("../src/mainimage1.jpg")',
-  'url("../src/mainimage2.jpg")',
-  'url("../src/mainimage3.jpg")',
+  'url("./src/mainimage1.jpg")',
+  'url("./src/mainimage2.jpg")',
+  'url("./src/mainimage3.jpg")',
 ];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
