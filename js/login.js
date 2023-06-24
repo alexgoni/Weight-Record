@@ -1,6 +1,3 @@
-// dict 형태로 localstorage 저장
-// min max 설정
-
 const nextButton = document.getElementById("next-button");
 const form = document.querySelector("form");
 const goalRadios = document.getElementsByName("goal");
@@ -18,8 +15,7 @@ targetWeight.addEventListener("input", () => {
 });
 
 nextButton.addEventListener("click", function (e) {
-  e.preventDefault(); // 버튼의 기본 동작인 폼 제출을 막음
-
+  e.preventDefault();
   if (form.checkValidity()) {
     // 필드가 유효성 검사를 통과하면 데이터를 저장하고 plan.html로 이동
     const name = document.getElementById("name").value;
@@ -57,5 +53,5 @@ function getCurrentGoal() {
       return goalRadios[i].value;
     }
   }
-  return null; // 선택된 값이 없으면 null 반환
+  return null;
 }

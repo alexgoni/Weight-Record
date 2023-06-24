@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(45deg, skyblue, slateblue);
+  background-size: cover;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: inline-block;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+form h1 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+label {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  font-size: small;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select input[type="radio"] {
+  display: none;
+}
+.select input[type="radio"] + label {
+  display: inline-block;
+  cursor: pointer;
+  height: 24px;
+  width: 90px;
+  border: 1px solid #333;
+  line-height: 24px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 1rem 1rem 0 1rem;
+}
+.select input[type="radio"] + label {
+  background-color: #fff;
+  color: #333;
+}
+.select input[type="radio"]:checked + label {
+  background-color: #333;
+  color: #fff;
+}
+
+button#next-button {
+  width: 4rem;
+  height: 1.5rem;
+  float: right;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  background-color: #3b5998; /* 페이스북 색상 */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button#next-button:hover {
+  background-color: #4a6aa8; /* hover 시 색상 변경 */
+}
+
+button#next-button:focus {
+  outline: none; /* 클릭 시 포커스 표시 제거 */
+}

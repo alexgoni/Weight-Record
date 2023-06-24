@@ -1,0 +1,162 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+
+  background-size: cover;
+}
+
+.etc {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2.5rem;
+  width: 90%;
+}
+
+.etc a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#weather,
+#clock {
+  float: right;
+  margin-left: 1rem;
+  color: beige;
+}
+
+.container {
+  width: 90%;
+  height: 75%;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1;
+  background-color: rgba(245, 245, 245, 0.95);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  padding-right: 1rem;
+  border-right: 1px solid #c6c6c6;
+  text-align: center;
+}
+
+#greeting {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#updated-weight span {
+  font-weight: bold;
+  font-size: larger;
+}
+
+#other-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid olivedrab;
+  border-radius: 5px;
+  white-space: nowrap;
+  padding: 0.5rem;
+  width: 202px;
+  margin: 0 auto;
+}
+
+#other-info span {
+  padding: 0.2rem;
+}
+
+#other-info span:nth-child(1),
+span:nth-child(4) {
+  font-weight: bold;
+}
+
+#updated-weight input {
+  margin-top: 1rem;
+  height: 25px;
+}
+
+.todo-container {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+#todo h2 {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+}
+
+#todo-list li {
+  list-style: "🚩";
+  padding: 0.3rem;
+  font-size: medium;
+}
+
+#todo-list button {
+  border: none;
+  margin-left: 0.7rem;
+}
+
+.quote-container {
+  padding: 0.5rem;
+  border: 2px solid olivedrab;
+  border-radius: 5px;
+}
+
+.quote-container h4 {
+  margin: 0.4rem 0 0.4rem 0.1rem;
+}
+
+#quote {
+  margin: 0.5rem;
+}
+
+/* 작은 화면에 대한 스타일 */
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  .etc {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  #weather,
+  #clock {
+    float: none;
+    margin: 0;
+    display: block;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main-container {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .todo-container {
+    padding-left: 0;
+  }
+
+  #todo-form input {
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 const bmiSpan = document.querySelector("#other-info span:nth-child(2)");
-const targetSpan = document.querySelector("#other-info span:nth-child(4)");
+const targetSpan = document.querySelector("#other-info span:nth-child(5)");
+const weightSpan = document.querySelector("#recent-weight");
 
 const height = userInfo.height / 100;
 const targetWeight = userInfo.targetWeight;
@@ -18,8 +19,11 @@ function checkGoal() {
     (goal === "bulkup" && recentWeight >= targetWeight) ||
     (goal == "diet" && recentWeight <= targetWeight)
   ) {
-    console.log("Congratulations!"); // 배경색 바꾸기
+    const span = document.createElement("span");
+    span.innerText = "🎉";
+    weightSpan.appendChild(span);
   }
 }
 
 otherInfo();
+checkGoal();

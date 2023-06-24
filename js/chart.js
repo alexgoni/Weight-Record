@@ -26,7 +26,7 @@ function updateChart() {
       ],
     },
     options: {
-      responsive: true,
+      responsive: false,
       scales: {
         y: {
           suggestedMin: Math.min(...weightList.map((data) => data.weight)) - 7, // 최소값에 7의 여유 공간을 둠

@@ -4,6 +4,6 @@ window.onload = function () {
     window.location.href = "mypage.html";
   } else {
     const greeting = document.querySelector("#greeting");
-    greeting.innerText = `Hello ${savedName}`;
+    greeting.innerText = `Hello ${savedName}!`;
   }
 };

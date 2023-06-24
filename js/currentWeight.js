@@ -1,7 +1,7 @@
 const updatedWeight = document.querySelector("#updated-weight");
 const updateForm = updatedWeight.querySelector("#update-form");
 const updateInput = updateForm.querySelector("input");
-const currentWeight = updatedWeight.querySelector("h3");
+const currentWeight = updatedWeight.querySelector("span:nth-child(2)");
 
 const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 let weightList = [];
@@ -17,7 +17,7 @@ function getCurrentWeight() {
 }
 
 function paintCurrentWeight() {
-  currentWeight.innerText = getCurrentWeight();
+  currentWeight.innerText = `${getCurrentWeight()}kg`;
 }
 
 function addWeight(e) {
